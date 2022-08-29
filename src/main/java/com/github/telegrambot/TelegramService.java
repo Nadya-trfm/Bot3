@@ -4,11 +4,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import static com.github.telegrambot.ENV.TOKEN;
 
-public class JsonPlaceholderService {
+public class TelegramService {
     private Retrofit retrofit;
-    private static JsonPlaceholderService instance;
+    private static TelegramService instance;
     private static final String BASE_URL="https://api.telegram.org/bot"+TOKEN+"/";
-    private JsonPlaceholderService(){
+    private TelegramService(){
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -16,15 +16,15 @@ public class JsonPlaceholderService {
                 .build();
     }
 
-    public static  JsonPlaceholderService getInstance(){
+    public static TelegramService getInstance(){
         if(instance == null){
-            instance = new JsonPlaceholderService();
+            instance = new TelegramService();
         }
         return instance;
     }
 
-    public JsonPlaceholderApi getJSONApi()
+    public TelegramApi getJSONApi()
     {
-        return retrofit.create(JsonPlaceholderApi.class);
+        return retrofit.create(TelegramApi.class);
     }
 }

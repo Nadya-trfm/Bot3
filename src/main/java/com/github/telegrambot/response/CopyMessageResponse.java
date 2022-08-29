@@ -1,4 +1,4 @@
-package com.github.telegrambot.request;
+package com.github.telegrambot.response;
 
 import lombok.*;
 
@@ -6,7 +6,7 @@ import lombok.*;
 @Setter
 @Getter
 @NoArgsConstructor
-public class CopyMessageRequest {
+public class CopyMessageResponse {
     @ToString
     @Setter
     @Getter
