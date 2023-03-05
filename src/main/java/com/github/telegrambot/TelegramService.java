@@ -7,7 +7,8 @@ import static com.github.telegrambot.ENV.TOKEN;
 public class TelegramService {
     private Retrofit retrofit;
     private static TelegramService instance;
-    private static final String BASE_URL="https://api.telegram.org/bot"+TOKEN+"/";
+    private  static  final String BOT_TOKEN ="bot"+TOKEN+"/";
+    private static final String BASE_URL="https://api.telegram.org/"+BOT_TOKEN;
     private TelegramService(){
 
         retrofit = new Retrofit.Builder()

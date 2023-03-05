@@ -37,8 +37,18 @@ public class UpdateResponse {
         public Chat chat;
         public int date;
         public String text;
+        public ArrayList<Photo> photo;
     }
 
+    @ToString
+    @Getter
+    public class Photo{
+        public String file_id;
+        public String file_unique_id;
+        public int file_size;
+        public int width;
+        public int height;
+    }
     @ToString
     @Getter
     public class Result{
